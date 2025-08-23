@@ -27,11 +27,11 @@ const connectDB = require('./config/database');
 
 if (!process.env.JWT_SECRET) {
   console.log('JWT_SECRET not found in environment, using default for development only');
-  process.env.JWT_SECRET = process.env.NODE_ENV === 'development' 
+  process.env.JWT_SECRET = process.env.NODE_ENV === 'production' 
     ? null 
     : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMn0.KMUFsIDTnFmyG3nMiGM6H9FNFUROf3wh7SmqJp-QV30";
   
-  if (process.env.NODE_ENV === 'development') {
+  if (process.env.NODE_ENV === 'production') {
     console.error('JWT_SECRET must be set in production environment!');
     process.exit(1);
   }

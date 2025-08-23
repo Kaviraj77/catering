@@ -45,7 +45,7 @@ const app = express();
 // CORS configuration for production
 const corsOptions = {
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://catering-cl43.vercel.app'] 
+    ? ['https://catering-nu.vercel.app'] 
     : ['http://localhost:3000'],
   credentials: true,
   optionsSuccessStatus: 200

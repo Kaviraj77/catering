@@ -206,10 +206,8 @@ const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
   port: 587,
   secure: false,
-  auth: {
-    user: 'abhilashbanda7@gmail.com',
-    pass: 'dbsw azmz uzhk vdzw',
-  },
+ //auth smtp credentials
+  
 });
 
 function generateOTP() {
